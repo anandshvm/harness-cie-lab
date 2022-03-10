@@ -1,0 +1,23 @@
+connector:
+  name: github-anandshvm
+  identifier: githubanandshvm
+  description:
+  orgIdentifier: default
+  projectIdentifier: bootcampcianands
+  type: Github
+  spec:
+    url: https://github.com/anandshvm
+    validationRepo: harness-cie-lab
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: anandshvm
+          tokenRef: githubanand
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: githubanand
+    executeOnDelegate: true
+    type: Account
